@@ -1,0 +1,16 @@
+public int reverseBits(int n) {
+    
+    int reverse = n & 1;
+    int i = 1;
+   
+    while (i < 32) {
+      
+      n = n >> 1;
+      
+      reverse = reverse << 1;
+     
+      reverse += n & 1;
+      i++;
+    }
+    return reverse;
+  }
